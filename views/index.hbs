@@ -1,0 +1,99 @@
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            width: 100vw;
+            height: 65vh;
+        }
+        
+        .mapboxgl-popup {
+            max-width: 200px;
+        }
+    @media only screen and (max-width: 1500px){
+        .carousel-inner{
+            margin-left: -100px;
+            height: 500px;
+            width: 700px;
+        }
+    }
+    @media only screen and (max-width: 1300px){
+        .carousel-inner{
+            margin-left: -100px;
+            height: 500px;
+            width: 700px;
+        }
+    }
+    @media only screen and (max-width: 1000px){
+        .carousel-inner{
+            margin-left: -60px;
+            height: 500px;
+            width: 700px;
+        }
+    }
+    @media only screen and (max-width: 700px){
+        .carousel-inner{
+            height: 400px;
+            width: 500px;
+        }
+    }
+    @media only screen and (max-width: 400px){
+        .carousel-inner{
+            height: 400px;
+            width: 400px;
+        }
+    }
+</style>
+
+<div style="margin-top: 80px;">
+    <div class="container-fluid" id="container">
+        <div class="card text-center" id="prompt">
+            <div class="card-body" >
+                <h1 style="text-align: center; color: red; font-size: 500; font-weight: 500; text-decoration:underline;">Corona Virus Data of Nepal</h1>
+                <div class="flex">
+                    <div class="info">
+                        <div class="cases">
+                            <h2>Total cases: </h2>
+                            <h2 class="data">{{info.cases}}</h2>
+                        </div>
+                        <div class="recovered">
+                            <h2>Total recovered: </h2>
+                            <h2 class="data">{{info.recovered}}</h2>
+                        </div>
+                        <div class="deaths">
+                            <h2>Total deaths: </h2>
+                            <h2 class="data">{{info.deaths}}</h2>
+                        </div>
+                        <div class="active-cases">
+                            <h2>Active cases: </h2>
+                            <h2 class="data">{{info.active}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='map'></div>
+
+    <div class="card card-image img-fluid" style="background-image: url('images/blooddonate.jpg'); background-size: cover;">
+        <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+            <div class="py-5">
+
+                <!-- Content -->
+                <h4 class="card-title h4 my-4 py-2">DONATE BLOOD & PLASMA, SAVE LIFE!</h4>
+                <h1 class="mb-4 pb-2 px-md-5 mx-md-5">DONATE YOUR BLOOD & PLASMA AND INSPIRE<br> OTHERS TO DONATE.</h1>
+                <a class="btn btn-danger" href="./register"><b>JOIN WITH US</b><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Jumbotron -->
+</div>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+
+<script src="../js/map.js"></script>
